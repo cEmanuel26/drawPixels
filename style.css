@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.canvasContainer {
+  border: 1px solid black;
+  width: auto;
+  display: flex;
+  height: 60%;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.pixelDiv {
+  padding: 0;
+  margin: 0;
+  width: 6.25%;
+  height: 6.25%;
+  background-color: white;
+  border: 1px solid black;
+}
