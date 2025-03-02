@@ -4,20 +4,39 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  height: 80vh;
+  font-family: 'Pixelify Sans', sans-serif;
+  background-color: beige;
+}
+header {
+  height: 10vh;
+}
+header h1 {
+  font-family: 'Rubik Moonrocks', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px 0;
+  font-size: 48px;
+  text-align: center;
 }
 .mainContainer {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
+  justify-content: center;
+  height: 80%;
+  position: relative;
 }
 .controlsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 140px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-left: 25%;
+  transform: translateY(-50%);
 }
 .canvasContainer {
   border: 1px solid black;
@@ -27,7 +46,14 @@ body {
   flex-wrap: wrap;
   gap: 0;
   overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
+.canvasContainer:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
 .pixelDiv {
   padding: 0;
   margin: 0;
@@ -35,4 +61,92 @@ body {
   height: 1.5625%;
   background-color: white;
   border: 1px solid black;
+}
+
+#canvasColor {
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.clear,
+.removeLines,
+.opacityMode {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 16px;
+  width: 140px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.clear:hover,
+.removeLines:hover,
+.opacityMode:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.clear:active,
+.removeLines:active,
+.opacityMode:active {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  scale: 0.9;
+}
+
+.random {
+  margin-bottom: 5px;
+  margin-top: 3px;
+  padding: 2px;
+  display: block;
+  margin: 0 auto;
+
+  background: rgb(255, 0, 0);
+  background: -moz-linear-gradient(
+    left,
+    rgb(255, 0, 0) 0%,
+    rgb(0, 255, 0) 50%,
+    rgb(0, 0, 255) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(255, 0, 0) 0%,
+    rgb(0, 255, 0) 50%,
+    rgb(0, 0, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(255, 0, 0) 0%,
+    rgb(0, 255, 0) 50%,
+    rgb(0, 0, 255) 100%
+  );
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Pixelify Sans', sans-serif;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+footer h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.githubLink {
+  font-size: 30px;
+  margin: 0 15px;
+  color: inherit;
+  text-decoration: none;
 }

@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6ec6f91d31.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js" defer></script>
     <title>Etch-A-Sketch</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Etch-A-Sketch</h1>
+      <h1>Etch-A-Sketch</h1>
     </header>
-   <div class="mainContainer">
 
-        <div class="controlsContainer">
-            <button class="clear">Reset Canvas</button>
-            <button class="color">Change Color</button>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
-            </div>
+    <div class="mainContainer">
+      <div class="controlsContainer">
+        <button class="removeLines">Remove lines</button>
+        <button class="clear">Reset Canvas</button>
+        <button class="opacityMode">Opacity Mode</button>
+        <div class="changeColor">
+          <label class="color">Change Color:</label>
+          <input
+            type="color"
+            id="canvasColor"
+            name="favcolor"
+            value="#000000"
+          />
         </div>
-        <div class="canvasContainer">
-            
-        </div>    
+        <div class="randomColor">
+          <label class="color">Randomize Colors:</label>
+          <button class="random">RGB</button>
+        </div>
+
+        <label for="myRange">Ajust pixel size:</label>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="16"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+      </div>
+      <div class="canvasContainer"></div>
     </div>
     <footer>
-        <h3>Created and designed by cEmanuel @ <span class="githubLink"></span></h3>
+      <h3>
+        Created and designed by cEmanuel
+        <a
+          href="https://github.com/cEmanuel26"
+          class="githubLink"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </h3>
     </footer>
-    
-</body>
+  </body>
 </html>
